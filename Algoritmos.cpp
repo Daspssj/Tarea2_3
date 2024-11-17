@@ -44,8 +44,8 @@ int costo_sust(char a, char b) {
     return costo_sustitucion[a - 'a'][b - 'a'];
 }
 
-int costo_inser(char b) {
-    return costo_insercion[b - 'a'];
+int costo_inser(char a) {
+    return costo_insercion[a - 'a'];
 }
 
 int costo_elim(char a) {
@@ -69,9 +69,9 @@ int brute_force(string s1, string s2){
     minimo_costo = min(minimo_costo, brute_force(s1.substr(0, i - 1), s2) + costo_elim(s1[i - 1]));
     minimo_costo = min(minimo_costo, brute_force(s1, s2.substr(0, j - 1)) + costo_inser(s2[j - 1]));
 
-    if (i > 1 && j > 1 && s1[i - 1] == s2[j - 2] && s1[i - 2] == s2[j - 1]) {
-        costo = costo_transpos(s1[i - 1],s2[j - 1]);
-        minimo_costo = min(minimo_costo, brute_force(s1.substr(0, i - 2), s2.substr(0, j - 2)) + costo);
+    if (i > 1 && j > 1 && s1[i] == s2[j - 1] && s1[i - 1] == s2[j]) {
+        costo = costo_transpos(s1[i],s2[j]);
+        minimo_costo = min(minimo_costo, brute_force(s1.substr(0, i - 1), s2.substr(0, j - 1)) + costo);
     }
 
     return minimo_costo;
@@ -91,8 +91,8 @@ int dynamic_progra(string s1, string s2){
         dp[0][j] = j == 0 ? 0 : dp[0][j - 1] + costo_inser(s2[j - 1]);
     }
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
+    for (int i = 0; i <= n; ++i) {
+        for (int j = 0; j <= m; ++j) {
             int costo = costo_sust(s1[i - 1], s2[j - 1]);
             dp[i][j] = min({dp[i - 1][j] + costo_elim(s1[i - 1]), dp[i][j - 1] + costo_inser(s2[j - 1]), dp[i - 1][j - 1] + costo});
 
@@ -116,20 +116,22 @@ int main(){
     }
 
     string s1, s2;
-    getline(file, s1);
-    getline(file, s2);
+    
+    while (getline(file, s1) && getline(file, s2)) {
+        auto inicio1 = chrono::high_resolution_clock::now();
+        cout << "Costo de edicion de fuerza bruta: " << brute_force(s1, s2) << endl;
+        auto fin1 = chrono::high_resolution_clock::now();
+        auto duraccion1 = chrono::duration_cast<chrono::microseconds>(fin1 - inicio1);
+        cout << "Tiempo de ejecucion: " << duraccion1.count() << " microsegundos" << " / "<< duraccion1.count()/1000000 << " segundos" << endl;
+
+        //auto inicio2 = chrono::high_resolution_clock::now();
+        //cout << "Costo de edicion de programacion dinamica: " << dynamic_progra(s1, s2) << endl;
+        //auto fin2 = chrono::high_resolution_clock::now();
+        //auto duraccion2 = chrono::duration_cast<chrono::microseconds>(fin2 - inicio2);
+        //cout << "Tiempo de ejecucion: " << duraccion2.count() << " microsegundos" << " / "<< duraccion2.count()/1000000 << " segundos" << endl;
+    }
 
     file.close();
 
-    //auto inicio1 = chrono::high_resolution_clock::now();
-    //cout << "Costo de edicion de fuerza bruta: " << brute_force(s1, s2) << endl;
-    //auto fin1 = chrono::high_resolution_clock::now();
-    //auto duraccion1 = chrono::duration_cast<chrono::microseconds>(fin1 - inicio1);
-    //cout << "Tiempo de ejecucion: " << duraccion1.count() << " microsegundos" << " / "<< duraccion1.count()/1000000 << " segundos" << endl;
-    
-    auto inicio2 = chrono::high_resolution_clock::now();
-    cout << "Costo de edicion de programacion dinamica: " << dynamic_progra(s1, s2) << endl;
-    auto fin2 = chrono::high_resolution_clock::now();
-    auto duraccion2 = chrono::duration_cast<chrono::microseconds>(fin2 - inicio2);
-    cout << "Tiempo de ejecucion: " << duraccion2.count() << " microsegundos" << " / "<< duraccion2.count()/1000000 << " segundos" << endl;
+    return 0;
 }
