@@ -19,54 +19,46 @@ void generacion_data(string tipo){
     }
 
     if(tipo == "mismo_tamano"){
-        for (int i = 0; i < 10; ++i) {
-            int tamano = rand() % 14 + 1;
-            string s1 = palabra_aleatoria(tamano);
-            string s2 = palabra_aleatoria(tamano);
+        for (int i = 0; i < 16; ++i) {
+            string s1 = palabra_aleatoria(i);
+            string s2 = palabra_aleatoria(i);
             file << s1 << endl << s2 << endl;
         }
     }
     else if(tipo == "s1>s2"){
-        for (int i = 0; i < 10; ++i) {
-            int tamano1 = rand() % 14 + 1;
-            int tamano2 = rand() % tamano1 + 1;
-            string s1 = palabra_aleatoria(tamano1);
-            string s2 = palabra_aleatoria(tamano2);
+        for (int i = 0; i < 16; ++i) {
+            string s1 = palabra_aleatoria(i + 1);
+            string s2 = palabra_aleatoria(i/2);
             file << s1 << endl << s2 << endl;
         }
     }
     else if(tipo == "s1<s2"){
-        for (int i = 0; i < 10; ++i) {
-            int tamano2 = rand() % 14 + 1;
-            int tamano1 = rand() % tamano2 + 1;
-            string s1 = palabra_aleatoria(tamano1);
-            string s2 = palabra_aleatoria(tamano2);
+        for (int i = 0; i < 16; ++i) {
+            string s1 = palabra_aleatoria(i/2);
+            string s2 = palabra_aleatoria(i + 1);
             file << s1 << endl << s2 << endl;
         }
     }
     else if(tipo == "s1_vacia"){
-        for (int i = 0; i < 10; ++i) {
-            int tamano = rand() % 14 + 1;
+        for (int i = 0; i < 16; ++i) {
             string s1 = "";
-            string s2 = palabra_aleatoria(tamano);
+            string s2 = palabra_aleatoria(i);
             file << s1 << endl << s2 << endl;
         }
     }
     else if(tipo == "s2_vacia"){
-        for (int i = 0; i < 10; ++i) {
-            int tamano = rand() % 14 + 1;
-            string s1 = palabra_aleatoria(tamano);
+        for (int i = 0; i < 16; ++i) {
+            string s1 = palabra_aleatoria(i);
             string s2 = "";
             file << s1 << endl << s2 << endl;
         }
     }
     else if(tipo == "transposicion"){
-        for (int i = 0; i < 10; ++i) {
-            int tamano = rand() % 14 + 1;
-            string s2 = palabra_aleatoria(tamano);
+        for (int i = 0; i < 16; ++i) {
+            string s2 = palabra_aleatoria(i + 1);
             string s1 = s2;
-            if (tamano > 1) {
-                swap(s1[0], s1[1]);
+            for (string::size_type j = 0; j < s1.size() - 1; j += 2) {
+                swap(s1[j], s1[j + 1]);
             }
             file << s1 << endl << s2 << endl;
         }
