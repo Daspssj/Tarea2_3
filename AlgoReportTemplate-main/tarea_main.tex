@@ -1,0 +1,132 @@
+\documentclass[11pt,spanish]{article}
+
+\input{preamble.tex} 
+
+\input{author.tex}
+
+\headheight=14pt
+\linespread{1.3}
+\author{\namestudent}
+\pagestyle{fancy}
+\fancyhf{}%
+\fancyfoot[R]{ \namestudent \\ \rolusm}
+\fancyfoot[L]{Campus \campus} 
+\fancyfoot[C]{\thepage}
+\rhead{2024-2}
+\lhead{INF-221}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newbool{programs}
+\boolfalse{programs}
+\chead{INFORME TAREA \tnum~}
+
+
+
+\title{
+  \huge
+  \textbf{INFORME TAREA \tnum~ \\ ALGORITMOS Y COMPLEJIDAD} \\[1ex]
+  \emph{\textquote{Explorando la Distancia entre Cadenas, una Operación a la Vez}}
+  }
+
+  
+\date{
+  \small
+  \today
+}
+
+
+
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy} 
+\vspace{-1.0\baselineskip}
+
+
+
+
+\begin{abstract}
+  \textit{ 
+    \input{sections/abstract}
+  }
+     
+\end{abstract}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+
+\newpage
+\section{Introducción}
+\input{sections/introduction}
+
+\newpage
+\section{Diseño y Análisis de Algoritmos} 
+\input{sections/design_analysis}
+
+\subsection{Fuerza Bruta}
+La solucion diseñada para el algoritmo de fuerza bruta se enfoca en recorrer todas las posibles combinaciones
+de las operaciones de inserción, eliminacion, sustitución y transposición, comparando la cadena de strings 
+\texttt{S1} y \texttt{S2} para encontrar la distancia minima de edicción extendida, modificando unicamente una
+de estas 2 cadenas en cada iteración, en mi caso se modifica la primera cadena \texttt{S1}.
+
+Como hay que explesar las complajidades en terminos de las longitudes de las cadenas de entrada
+$S1$ y $S2$, se tiene que n y m son las longitudes de las cadenas $S1$ y $S2$ respectivamente
+y se tiene que la complejidad temporal de este algoritmo es de $O(4^{\max(n,m)})$ y la complejidad espacial
+es de $O(\max(n,m))$.
+
+
+La transposiciones y costos variables impactan significativamente en la complejidad en el caso de las transposiciones
+se tiene que la complejidad temporal aumenta a $O(4^{\max(n,m)})$ siendo la complejidad espacial sin la transposición
+de $O(3^{\max(n,m)})$ en cambio la complejidad espacial con la transposición es la misma que la vista anteriormente.
+
+
+Para el ejemplo de ejecucionse tienen las cadenas $S1$ = "kitten" y $S2$ = "sitting", se tiene que la distancia de edición mínima es de 1,
+y se puede obtener de la siguiente manera:
+
+\begin{itemize}
+    \item \textbf{Sustituir 'k' por 's':} k \textrightarrow s
+    \item \textbf{Insertar 'g' al final de la cadena:} \textrightarrow g
+    \item \textbf{Sustituir 'e' por 'i':} e \textrightarrow i
+    
+\end{itemize}
+
+\input{sections/design_analysis_brute_force}
+\subsection{Programación Dinámica}
+
+
+
+\input{sections/design_analysis_dynamic_programming}
+\newpage
+\section{Implementaciones}
+\input{sections/implementations}
+
+\newpage
+\section{Experimentos}
+\input{sections/experiment_intro}
+\subsection{Datasets}
+\input{sections/experiment_dataset}
+
+\subsection{Resultados}
+\input{sections/experiment_results}
+
+\newpage
+\section{Conclusiones}
+\input{sections/conclusions}
+
+\newpage
+
+\section{Condiciones de entrega}
+\input{condiciones}
+
+\newpage
+\appendix
+
+
+
+\input{sections/appendix1}
+\printbibliography
+
+\end{document}
+
+

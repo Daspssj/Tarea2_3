@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Diseño y Análisis de Algoritmos}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Fuerza Bruta}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Programación Dinámica}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Descripción de la solución recursiva}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Relación de recurrencia}{4}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Identificación de subproblemas}{4}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Estructura de datos y orden de cálculo}{5}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Complejidades}{5}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Ejemplo de ejecución}{5}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Algoritmo utilizando programación dinámica}{6}{subsubsection.2.2.7}%
+\contentsline {section}{\numberline {3}Implementaciones}{7}{section.3}%
+\contentsline {section}{\numberline {4}Experimentos}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Infraestructura utilizada}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Datasets}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Resultados}{8}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusiones}{11}{section.5}%
+\contentsline {section}{\numberline {6}Condiciones de entrega}{12}{section.6}%

@@ -1,0 +1,118 @@
+
+\subsubsection{Descripción de la solución recursiva}
+
+Este algoritmo busca calcular el costo mínimo de transformar una cadena de caracteres $S1$ en otra 
+cadena de caracteres $S2$. Para ello, se consideran las siguientes operaciones:
+\begin{itemize}
+    \item \textbf{Inserción:} Insertar un carácter a la cadena $S1$.
+    \item \textbf{Eliminación:} Eliminar un carácter de la cadena $S1$.
+    \item \textbf{Sustitución:} Reemplazar un carácter de la cadena $S1$ por otro que le correspon a $S2$.
+    \item \textbf{Transposición:} Intercambiar dos caracteres consecutivos de la cadena $S1$ y $S2$.
+\end{itemize}
+
+
+Se enfoca en comparar el costo de realizar cada una de estas operaciones para cada caracter para asi 
+elejir la operación que minimice el costo total de transformar $S1$ en $S2$.
+
+\subsubsection{Relación de recurrencia}
+
+Sea dp[i][j] el costo mínimo de transformar los primeros i caracteres de S1 en los primeros j caracteres de S2, 
+tenemos que la relación de recurrencia es la siguiente:
+
+\[
+dp[i][j] =
+\begin{cases} 
+    j \cdot \text{costo\_inser}(s2[j-1]), & \text{si } i = 0 \\
+    i \cdot \text{costo\_elim}(s1[i-1]), & \text{si } j = 0 \\
+    \min \bigg(
+        dp[i][j-1] + \text{costo\_inser}(s2[j-1]), & \text{(insertar)} \\
+        dp[i-1][j] + \text{costo\_elim}(s1[i-1]), & \text{(eliminar)} \\
+        dp[i-1][j-1] + \text{costo\_sust}(s1[i-1], s2[j-1]), & \text{(sustituir)} \\
+        dp[i-2][j-2] + \text{costo\_transpos}(s1[i-1], s2[j-1]) & \text{(transponer, si aplica)} 
+    \bigg)
+\end{cases}
+\]
+
+Como se puede obeservar en la relación de recurrencia, se consideran los casos base cuando $i = 0$ y $j = 0$,
+que corresponden a los costos de insertar y eliminar todos los caracteres de $S2$ y $S1$, respectivamente, y tambien
+se incluye la operación de transposición si se cumplen las condiciones necesarias.
+
+\subsubsection{Identificación de subproblemas}
+
+La soluicon que propone este algoritmo de transformar una cadena de caracteres $S1$ en otra cadena de caracteres $S2$ 
+(entregando los costos asociados) se puede dividir en subproblemas más pequeños, que corresponden a transformar
+subcadenas de $S1$ en subcadenas de $S2$, se busca transformar los prefijos inmediatos de $S1$ y $S2$ en cada iteración
+para luego sumar el costo de la operación que minimice el costo total de transformar $S1$ en $S2$.
+
+\subsubsection{Estructura de datos y orden de cálculo}
+
+Para resolver este problema utilizando programación dinámica, se propone utilizar una matriz $dp$ de tamaño $(n+1) 
+\times (m+1)$,donde $n$ y $m$ son las longitudes de las cadenas $S1$ y $S2$, respectivamente. El programa utiliza un
+programación dinamica don un enfoque de Bottom-Up. En la matriz se inicializan los valores de los casos base de
+manera que la primera fila es el costo de insertar caracteres en $S1$ y la primera columna respresenta el costo de
+eliminar caracteres de $S1$,luego se recorren las filas y columnas de la matriz para calcular el costo mínimo 
+de transformar los prefijos de $S1$ y $S2$ en cada iteración, se llenan los valores de la matriz de izquierda a derecha
+y de abajo hacia arriba, de manera que al final de la ejecución el valor de $dp[n][m]$ corresponderá al costo mínimo.
+
+\subsubsection{Complejidades}
+
+La complejidad temporal y espacial de este algoritmo son las mismas y es de $O(n \times m)$, donde $n$ y $m$ son 
+las longitudes de las cadenas $S1$ y $S2$, respectivamente.
+
+\subsubsection{Ejemplo de ejecución}
+
+Para las cadenas $S1$ = "kitten" y $S2$ = "sitting", se tiene que la distancia de edición mínima es de 1,
+y se puede obtener de la siguiente manera:
+
+\begin{itemize}
+    \item \textbf{Sustituir 'k' por 's':} k \textrightarrow s
+    \item \textbf{Insertar 'g' al final de la cadena:} \textrightarrow g
+    \item \textbf{Sustituir 'e' por 'i':} e \textrightarrow i
+    
+\end{itemize}
+
+\subsubsection{Algoritmo utilizando programación dinámica}
+
+\begin{algorithm}[H]
+    \SetKwProg{myproc}{Procedure}{}{End}
+    \SetKwFunction{ProgDinamica}{ProgDinamica}  
+    \SetKwFunction{CostoSust}{CostoSust}
+    \SetKwFunction{CostoElim}{CostoElim}
+    \SetKwFunction{CostoInser}{CostoInser}
+    \SetKwFunction{CostoTrans}{CostoTrans}
+
+    \DontPrintSemicolon
+    \footnotesize
+
+    \myproc{\ProgDinamica{S1, S2}}{
+        $n \leftarrow$ longitud de S1\;
+        $m \leftarrow$ longitud de S2\;
+        Crear matriz $dp$ de tamaño $(n+1) \times (m+1)$\;
+
+        \For{$i \leftarrow 0$ \textbf{to} $n$}{
+            $dp[i][0] \leftarrow$ costo de eliminar todos los caracteres hasta $i$ en S1\;
+        }
+        \For{$j \leftarrow 0$ \textbf{to} $m$}{
+            $dp[0][j] \leftarrow$ costo de insertar todos los caracteres hasta $j$ en S2\;
+        }
+
+        \For{$i \leftarrow 1$ \textbf{to} $n$}{
+            \For{$j \leftarrow 1$ \textbf{to} $m$}{
+                $costo\_inser \leftarrow dp[i][j-1] + \CostoInser{S2[j-1]}$\;
+                $costo\_elim \leftarrow dp[i-1][j] + \CostoElim{S1[i-1]}$\;
+                $costo\_sust \leftarrow dp[i-1][j-1] + \CostoSust{S1[i-1], S2[j-1]}$\;
+                $costo\_trans \leftarrow \infty$\;
+                
+                \uIf{$i > 1$ \textbf{and} $j > 1$ \textbf{and} $S1[i-1] = S2[j-2]$ \textbf{and} $S1[i-2] = S2[j-1]$}{
+                    $costo\_trans \leftarrow dp[i-2][j-2] + \CostoTrans{S1[i-2], S1[i-1]}$\;
+                }
+
+                $dp[i][j] \leftarrow \min(costo\_inser, costo\_elim, costo\_sust, costo\_trans)$\;
+            }
+        }
+
+        \Return $dp[n][m]$\;
+    }
+    \caption{Programación Dinámica para calcular la distancia mínima de edición.}
+    \label{alg:prog_dinamica}
+\end{algorithm}
