@@ -57,8 +57,8 @@ int costo_transpos(char a, char b) {
 }
 
 int brute_force(string s1, string s2){
-    int i = s1.size();
-    int j = s2.size();
+    int i = s1.length();
+    int j = s2.length();
 
     if (i == 0) return j * costo_inser(s2[j - 1]);
     if (j == 0) return i * costo_elim(s1[i - 1]);
@@ -77,39 +77,73 @@ int brute_force(string s1, string s2){
     return minimo_costo;
 }
 
-int dynamic_progra(string s1, string s2){
-    int n = s1.size();
-    int m = s2.size();
+int dynamic_progra(string& s1, string& s2){
+    int n = s1.length();
+    int m = s2.length();
 
-    vector<vector<int>> dp(m + 1, vector<int>(n + 1));
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1));
 
     for (int i = 0; i <= n; ++i) {
-        dp[i][0] = i == 0 ? 0 : dp[i - 1][0] + costo_elim(s1[i - 1]);
+        dp[i][0] = i * costo_elim(s1[i - 1]);
     }
 
     for (int j = 0; j <= m; ++j) {
-        dp[0][j] = j == 0 ? 0 : dp[0][j - 1] + costo_inser(s2[j - 1]);
+        dp[0][j] = j * costo_inser(s2[j - 1]);
     }
 
-    for (int i = 0; i <= n; ++i) {
-        for (int j = 0; j <= m; ++j) {
-            int costo = costo_sust(s1[i - 1], s2[j - 1]);
-            dp[i][j] = min({dp[i - 1][j] + costo_elim(s1[i - 1]), dp[i][j - 1] + costo_inser(s2[j - 1]), dp[i - 1][j - 1] + costo});
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            
+            int insertar = dp[i][j - 1] + costo_inser(s2[j - 1]);
 
+            int eliminar = dp[i - 1][j] + costo_elim(s1[i - 1]);
+
+            int sustituir = dp[i - 1][j - 1] + costo_sust(s1[i - 1], s2[j - 1]);
+
+            int transponer = INT_MAX;   
             if (i > 1 && j > 1 && s1[i - 1] == s2[j - 2] && s1[i - 2] == s2[j - 1]) {
-                costo = costo_transpos(s1[i - 1], s2[j - 1]);
-                dp[i][j] = min(dp[i][j], dp[i - 2][j - 2] + costo);
+                transponer = dp[i - 2][j - 2] + costo_transpos(s1[i - 1], s2[j - 1]);
             }
-        }
-    }
 
+            dp[i][j] = min({insertar, eliminar, sustituir, transponer});
+        } 
+    }
     return dp[n][m];   
 }
 
 int main(){
     load_costos();
     
-    ifstream file("dataset.txt");
+    int opcion;
+    string archivo;
+
+    cout << "Elija el archivo: \n1- Mismo tamanio\n2- S1 vacio\n3- S2 vacio\n4- S1 Mayor que S2\n5- S2 Mayor que S1\n6- Transpuesto" << endl;
+    cin >> opcion;
+
+    if(opcion == 1){
+        archivo = "dataset_mismo_tamano.txt";
+    }
+    else if(opcion == 2){
+        archivo = "dataset_s1_vacia.txt";
+    }
+    else if(opcion == 3){
+        archivo = "dataset_s2_vacia.txt";
+    }
+    else if(opcion == 4){
+        archivo = "dataset_s1>s2.txt";
+    }
+    else if(opcion == 5){
+        archivo = "dataset_s1<s2.txt";
+    }
+    else if(opcion == 6){
+        archivo = "dataset_transposicion.txt";
+    }
+    else{
+        cout << "Opcion invalida" << endl;
+        return 1;
+    }
+
+    ifstream file(archivo);
     if (!file.is_open()) {
         cout << "No se pudo abrir el archivo" << endl;
         return 1;
@@ -124,11 +158,13 @@ int main(){
         auto duraccion1 = chrono::duration_cast<chrono::microseconds>(fin1 - inicio1);
         cout << "Tiempo de ejecucion: " << duraccion1.count() << " microsegundos" << " / "<< duraccion1.count()/1000000 << " segundos" << endl;
 
-        //auto inicio2 = chrono::high_resolution_clock::now();
-        //cout << "Costo de edicion de programacion dinamica: " << dynamic_progra(s1, s2) << endl;
-        //auto fin2 = chrono::high_resolution_clock::now();
-        //auto duraccion2 = chrono::duration_cast<chrono::microseconds>(fin2 - inicio2);
-        //cout << "Tiempo de ejecucion: " << duraccion2.count() << " microsegundos" << " / "<< duraccion2.count()/1000000 << " segundos" << endl;
+        auto inicio2 = chrono::high_resolution_clock::now();
+        cout << "Costo de edicion de programacion dinamica: " << dynamic_progra(s1, s2) << endl;
+        auto fin2 = chrono::high_resolution_clock::now();
+        auto duraccion2 = chrono::duration_cast<chrono::microseconds>(fin2 - inicio2);
+        cout << "Tiempo de ejecucion: " << duraccion2.count() << " microsegundos" << " / "<< duraccion2.count()/1000000 << " segundos" << endl;
+        
+        cout << endl;
     }
 
     file.close();
