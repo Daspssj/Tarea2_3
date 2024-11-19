@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <sys/resource.h>
 
 using namespace std;
 
@@ -111,6 +112,12 @@ int dynamic_progra(string& s1, string& s2){
     return dp[n][m];   
 }
 
+long memory_usage(){
+    struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+    return usage.ru_maxrss;
+}
+
 int main(){
     load_costos();
     
@@ -152,18 +159,25 @@ int main(){
     string s1, s2;
     
     while (getline(file, s1) && getline(file, s2)) {
+        long memoria_inicial = memory_usage();
         auto inicio1 = chrono::high_resolution_clock::now();
         cout << "Costo de edicion de fuerza bruta: " << brute_force(s1, s2) << endl;
         auto fin1 = chrono::high_resolution_clock::now();
+        long memoria_final = memory_usage();
         auto duraccion1 = chrono::duration_cast<chrono::microseconds>(fin1 - inicio1);
         cout << "Tiempo de ejecucion: " << duraccion1.count() << " microsegundos" << " / "<< duraccion1.count()/1000000 << " segundos" << endl;
+        cout << "Memoria utilizada: " << memoria_final - memoria_inicial << " KB" << endl;
 
+
+        long memoria_inicial1 = memory_usage();
         auto inicio2 = chrono::high_resolution_clock::now();
         cout << "Costo de edicion de programacion dinamica: " << dynamic_progra(s1, s2) << endl;
         auto fin2 = chrono::high_resolution_clock::now();
+        long memoria_final1 = memory_usage();
         auto duraccion2 = chrono::duration_cast<chrono::microseconds>(fin2 - inicio2);
         cout << "Tiempo de ejecucion: " << duraccion2.count() << " microsegundos" << " / "<< duraccion2.count()/1000000 << " segundos" << endl;
-        
+        cout << "Memoria utilizada: " << memoria_final1 - memoria_inicial1 << " KB" << endl;
+
         cout << endl;
     }
 

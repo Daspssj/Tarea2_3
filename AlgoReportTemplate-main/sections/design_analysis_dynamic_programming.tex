@@ -11,13 +11,13 @@ cadena de caracteres $S2$. Para ello, se consideran las siguientes operaciones:
 \end{itemize}
 
 
-Se enfoca en comparar el costo de realizar cada una de estas operaciones para cada caracter para asi 
+El algoritmo se enfoca en comparar el costo de realizar cada una de estas operaciones para cada caracter para asi 
 elejir la operación que minimice el costo total de transformar $S1$ en $S2$.
 
 \subsubsection{Relación de recurrencia}
 
 Sea dp[i][j] el costo mínimo de transformar los primeros i caracteres de S1 en los primeros j caracteres de S2, 
-tenemos que la relación de recurrencia es la siguiente:
+tenemos que la siguiente relación de recurrencia:
 
 \[
 dp[i][j] =
@@ -28,7 +28,7 @@ dp[i][j] =
         dp[i][j-1] + \text{costo\_inser}(s2[j-1]), & \text{(insertar)} \\
         dp[i-1][j] + \text{costo\_elim}(s1[i-1]), & \text{(eliminar)} \\
         dp[i-1][j-1] + \text{costo\_sust}(s1[i-1], s2[j-1]), & \text{(sustituir)} \\
-        dp[i-2][j-2] + \text{costo\_transpos}(s1[i-1], s2[j-1]) & \text{(transponer, si aplica)} 
+        dp[i-2][j-2] + \text{costo\_transpos}(s1[i-1], s2[j-1]) & \text{(transponer)} 
     \bigg)
 \end{cases}
 \]
@@ -47,12 +47,12 @@ para luego sumar el costo de la operación que minimice el costo total de transf
 \subsubsection{Estructura de datos y orden de cálculo}
 
 Para resolver este problema utilizando programación dinámica, se propone utilizar una matriz $dp$ de tamaño $(n+1) 
-\times (m+1)$,donde $n$ y $m$ son las longitudes de las cadenas $S1$ y $S2$, respectivamente. El programa utiliza un
-programación dinamica don un enfoque de Bottom-Up. En la matriz se inicializan los valores de los casos base de
+\times (m+1)$,donde $n$ y $m$ son las longitudes de las cadenas $S1$ y $S2$, respectivamente. El programa utiliza
+programación dinamica con un enfoque de Bottom-Up. En la matriz se inicializan los valores de los casos base de
 manera que la primera fila es el costo de insertar caracteres en $S1$ y la primera columna respresenta el costo de
 eliminar caracteres de $S1$,luego se recorren las filas y columnas de la matriz para calcular el costo mínimo 
 de transformar los prefijos de $S1$ y $S2$ en cada iteración, se llenan los valores de la matriz de izquierda a derecha
-y de abajo hacia arriba, de manera que al final de la ejecución el valor de $dp[n][m]$ corresponderá al costo mínimo.
+y de abajo hacia arriba, de manera que al final de la ejecución el valor de $dp[n][m]$ corresponderá al costo mínimo total.
 
 \subsubsection{Complejidades}
 
@@ -68,8 +68,37 @@ y se puede obtener de la siguiente manera:
     \item \textbf{Sustituir 'k' por 's':} k \textrightarrow s
     \item \textbf{Insertar 'g' al final de la cadena:} \textrightarrow g
     \item \textbf{Sustituir 'e' por 'i':} e \textrightarrow i
-    
 \end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        & & s & i & t & t & i & n \\
+        \hline
+        & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+        \hline
+        k & 1 & 1 & 2 & 3 & 4 & 5 & 6 \\
+        \hline
+        i & 2 & 2 & 1 & 2 & 3 & 4 & 5 \\
+        \hline
+        t & 3 & 3 & 2 & 1 & 2 & 3 & 4 \\
+        \hline
+        t & 4 & 4 & 3 & 2 & 1 & 2 & 3 \\
+        \hline
+        e & 5 & 5 & 4 & 3 & 2 & 3 & 4 \\
+        \hline
+        n & 6 & 6 & 5 & 4 & 3 & 4 & 3 \\
+        \hline
+    \end{tabular}
+    \caption{Matriz de costos para transformar la cadena "kitten" en "sitting".}
+    \label{tab:matriz_costos}
+\end{table}
+
+\subsubsection{Impacto de las transposiciones y costos variables}
+
+Las transpocisiones y los costos variables para este caso no impactan en absoluto a la complejidad temporal y espacial, 
+por lo que la complejidad temporal y espacial se mantiene en $O(n \times m)$.
 
 \subsubsection{Algoritmo utilizando programación dinámica}
 

@@ -1,16 +1,18 @@
-Para el analisis de los resultados se tiene que hay que destacar que en el eje y estan los timepos de ejecucion en microsegundos
-y en el eje x se tiene el largo de las cadenas de entrada, se puede observar que en la mayoria de los casos el tiempo de ejecucion
-es muy bajo, esto se debe a que las cadenas de entrada son muy pequeñas, en el caso de las cadenas de entrada de longitud 14 se puede
-observar que el tiempo de ejecucion es mayor, esto se debe a que la complejidad del algoritmo es de $O(4^{\max(n,m)})$ y la complejidad
-espacial es de $O(\max(n,m))$.
-Se puede observar tambien que en el caso de las cadenas de entradas para s1 y s2 vacios el tiempo de ejecucion de la fuerza bruta es mejor
-que el de programacion dinamica.
-
+Para el analisis de los resultados es importante notar que en el eje y estan los tiempos de ejecucion en microsegundos
+y en el eje x se tiene el largo de las cadenas de entrada, estos graficos estan dentro del archivo de la tarea, el archivo
+el archivo en cuestion se llama graficos.ipynb, las graficas no son generadas de manera automatica por lo que estos son los resultados
+de un promedio de 3 pruebas para cada datasets, favor de observar el codigo y en caso de replicar el experimento identificar los
+datos a cambiar para asi poder ver sus respectivas graficas, el programa esta hecho en jupyther y es muy intuitivo de usar para cambiar
+los resultados experimentales puede ver el codigo aca \url{https://github.com/Daspssj/Tarea2_3/blob/main/graficos.ipynb}, para 
+generar los datos en caso de querer replicar el trabajo favor de compilar y ejecutar el archivo de Crear\_datasets.cpp 
+\url{https://github.com/Daspssj/Tarea2_3/blob/main/Crear_datasets.cpp} y para generar sus propios resultados se tiene que compliar
+y ejecutar el archivo de Algoritmos.cpp \url{https://github.com/Daspssj/Tarea2_3/blob/main/Algoritmos.cpp} el programa implementado es
+bastante amigable con el ususario por lo que no sera dificil usarla, a continuacion se presentan los resultados obtenidos de las pruebas realizadas:
 
 \begin{figure}[H]
     \centering
     \begin{minipage}[t]{0.5\textwidth}
-        \includegraphics[width=\textwidth]{images/mismotamanio.png}
+        \includegraphics[width=\textwidth]{images/mismotananio.png}
     \end{minipage}%
     \begin{minipage}[t]{0.5\textwidth}
         \includegraphics[width=\textwidth]{images/transpuesto.png}   \end{minipage}%
@@ -39,3 +41,17 @@ que el de programacion dinamica.
     \caption{Tiempos de ejecucion vs largo de las cadenas}
     \label{fig:Tiempos de ejecucion vs largo de las cadenas}
 \end{figure}
+
+
+Como podemos observar en los primeros 2 graficos correspondientes a la figura 1 se puede observar que los tiempos de ejecucion de cada algoritmo son muy distintos
+entre si y esto se debe a las complejidades temporales de los algoritmos, se puede ver que el agoritmo de fuerza bruta crece de manera
+exponencial mientras que programacion dinamica se mantiene en un rango de valores aceptable, luego para los algunos de los strings
+vacios se ve que Fuerza bruta tiene un tiempo de ejecucion mas bajo que el de programacion dinamica aunque no mucho igualmente se puede
+ver en los graficos de la figura 2 y por ultimo para los strings de distinto tamaño se puede ver que el algoritmo de fuerza bruta tiene un tiempo 
+de ejecucion mas alto que el de programacion dinamica, sin embargo estos tiempos no son tan altos como en el caso de los strings de
+mismo tamaño ya que solo se transpone una cadena, esto quiere decir que no se tiene que recorrer todas las posibles combinaciones
+entre insertar, eliminar, sustituir o transponer.
+
+
+Nota: Es importante tener en cuenta el uso del cache para el primer resultado de fuerza bruta y programacion dinamica, ya que
+se tiene que en algunos casos el primer tiempo de ejecucion de los algoritmos son raramente mas altos que los demas primeros datos.

@@ -68,17 +68,18 @@
 La solucion diseñada para el algoritmo de fuerza bruta se enfoca en recorrer todas las posibles combinaciones
 de las operaciones de inserción, eliminacion, sustitución y transposición, comparando la cadena de strings 
 \texttt{S1} y \texttt{S2} para encontrar la distancia minima de edicción extendida, modificando unicamente una
-de estas 2 cadenas en cada iteración, en mi caso se modifica la primera cadena \texttt{S1}.
+de estas 2 cadenas en cada iteración, en nuestro caso solo se modifica la primera cadena \texttt{S1}.
 
-Como hay que explesar las complajidades en terminos de las longitudes de las cadenas de entrada
+Como hay que expresar las complajidades en terminos de las longitudes de las cadenas de entrada
 $S1$ y $S2$, se tiene que n y m son las longitudes de las cadenas $S1$ y $S2$ respectivamente
 y se tiene que la complejidad temporal de este algoritmo es de $O(4^{\max(n,m)})$ y la complejidad espacial
 es de $O(\max(n,m))$.
 
 
 La transposiciones y costos variables impactan significativamente en la complejidad en el caso de las transposiciones
-se tiene que la complejidad temporal aumenta a $O(4^{\max(n,m)})$ siendo la complejidad espacial sin la transposición
-de $O(3^{\max(n,m)})$ en cambio la complejidad espacial con la transposición es la misma que la vista anteriormente.
+se tiene que la complejidad temporal aumenta a $O(4^{\max(n,m)})$ siendo la complejidad temporal sin la transposición
+de $O(3^{\max(n,m)})$ esto se debe a que en el peor caso se tiene una mayor cantidad de llamadas recursivas, en cambio 
+la complejidad espacial con la transposición es la misma que la vista anteriormente.
 
 
 Para el ejemplo de ejecucionse tienen las cadenas $S1$ = "kitten" y $S2$ = "sitting", se tiene que la distancia de edición mínima es de 1,

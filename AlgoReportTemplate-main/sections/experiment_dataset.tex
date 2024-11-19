@@ -1,13 +1,16 @@
-Los datasets utilizados para las pruebas fueron 6, y son de 20 palabras de largo variable
+Los datasets utilizados para las pruebas fueron 6, y son de 32 palabras de largo variablem mas no aleatorio, estos datasets
+fueron generados de menera automatica y se guardaron en archivos de texto, cada dataset tiene un nombre, y fueron las siguientes:
 \begin{itemize}
-    \item \textbf{dataset1:} Contiene palabras de misma longitud que varia entra 1 y 14 caracteres
-    \item \textbf{dataset2:} Contiene palabras donde S1 es vacia y S2 tiene longitud aleatoria
-    \item \textbf{dataset3:} Contiene palabras donde S2 es vacia y S1 tiene longitud aleatoria
-    \item \textbf{dataset4:} Contiene palabras donde S1 es mayor o igual que S2
-    \item \textbf{dataset5:} Contiene palabras donde S2 es mayor o igual que S1
-    \item \textbf{dataset6:} Contiene palabras transpuestas
+    \item \textbf{dataset\_mismotamano.txt:} Contiene palabras de misma longitud que varia entra 1 y 15 caracteres.
+    \item \textbf{dataset\_s1\_vacia.txt:} Contiene palabras donde S1 es vacia y S2 tiene longitud variable.
+    \item \textbf{dataset\_s2\_vacia.txt:} Contiene palabras donde S2 es vacia y S1 tiene longitud variable.
+    \item \textbf{dataset\_s1>s2.txt:} Contiene palabras donde S1 es mayor o igual que S2.
+    \item \textbf{dataset\_s1<s2.txt:} Contiene palabras donde S2 es mayor o igual que S1.
+    \item \textbf{dataset\_transposicion.txt:} Contiene palabras transpuestas.
 \end{itemize}
 
 La importancia de estos datasets radica en que se pueden probar los algoritmos con distintos casos de prueba, y se pueden
 verificar si los algoritmos son capaces de resolverlos de manera correcta en varios casos, esto nos puede dar una idea de
-la eficiencia y efectividad de los algoritmos. mendiantes las pruebas que veremos acontinuacion.
+la eficiencia y efectividad de los algoritmos, lo que se busca probar con estos datasets es que los algoritmos sean capaces
+de resolver problemas donde las cadenas sean de distinto e igual tamaño, que pueda resolver problemas donde los dos strings o solamente
+uno de ellos este vacio y por ultimo que pueda resolver problemas donde las cadenas de caracteres esten transpuestas.

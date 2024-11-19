@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  17 NOV 2024 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  19 NOV 2024 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1580,13 +1580,13 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 7.63599pt on input line 74.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family futs in TS1 encoding.
-            Default family used instead on input line 88.
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family futs in TS1 encoding.
             Default family used instead on input line 89.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family futs in TS1 encoding.
             Default family used instead on input line 90.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family futs in TS1 encoding.
+            Default family used instead on input line 91.
  (sections/design_analysis_brute_force.tex) (sections/design_analysis_dynamic_programming.tex
 
 [3]
@@ -1608,42 +1608,41 @@ LaTeX Info: Symbol \textrightarrow not provided by
 [6] (sections/implementations.tex)
 
 [7] (sections/experiment_intro.tex) (sections/experiment_dataset.tex) (sections/experiment_results.tex
-<images/mismotamanio.png, id=122, 325.96782pt x 245.41687pt>
-File: images/mismotamanio.png Graphic file (type png)
-<use images/mismotamanio.png>
-Package pdftex.def Info: images/mismotamanio.png  used on input line 13.
-(pdftex.def)             Requested size: 236.01561pt x 177.69984pt.
-<images/transpuesto.png, id=124, 326.72063pt x 246.1697pt>
-File: images/transpuesto.png Graphic file (type png)
-<use images/transpuesto.png>
-Package pdftex.def Info: images/transpuesto.png  used on input line 16.
-(pdftex.def)             Requested size: 236.01561pt x 177.82425pt.
-
 
 [8]
-<images/s1vacio.png, id=132, 321.45094pt x 240.9pt>
+<images/mismotananio.png, id=133, 852.18375pt x 471.7625pt>
+File: images/mismotananio.png Graphic file (type png)
+<use images/mismotananio.png>
+Package pdftex.def Info: images/mismotananio.png  used on input line 15.
+(pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
+<images/transpuesto.png, id=134, 858.20625pt x 471.7625pt>
+File: images/transpuesto.png Graphic file (type png)
+<use images/transpuesto.png>
+Package pdftex.def Info: images/transpuesto.png  used on input line 18.
+(pdftex.def)             Requested size: 236.01561pt x 129.73868pt.
+<images/s1vacio.png, id=135, 876.27374pt x 471.7625pt>
 File: images/s1vacio.png Graphic file (type png)
 <use images/s1vacio.png>
-Package pdftex.def Info: images/s1vacio.png  used on input line 24.
-(pdftex.def)             Requested size: 236.01561pt x 176.87741pt.
-<images/s2vacio.png, id=133, 331.2375pt x 251.43938pt>
+Package pdftex.def Info: images/s1vacio.png  used on input line 26.
+(pdftex.def)             Requested size: 236.01561pt x 127.06084pt.
+<images/s2vacio.png, id=136, 852.18375pt x 471.7625pt>
 File: images/s2vacio.png Graphic file (type png)
 <use images/s2vacio.png>
-Package pdftex.def Info: images/s2vacio.png  used on input line 27.
-(pdftex.def)             Requested size: 236.01561pt x 179.15623pt.
-<images/s1mayor.png, id=134, 331.2375pt x 245.41687pt>
+Package pdftex.def Info: images/s2vacio.png  used on input line 29.
+(pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
+<images/s1mayor.png, id=137, 852.18375pt x 471.7625pt>
 File: images/s1mayor.png Graphic file (type png)
 <use images/s1mayor.png>
-Package pdftex.def Info: images/s1mayor.png  used on input line 35.
-(pdftex.def)             Requested size: 236.01561pt x 174.86507pt.
-<images/s1menor.png, id=135, 336.50719pt x 242.40562pt>
+Package pdftex.def Info: images/s1mayor.png  used on input line 37.
+(pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
+<images/s1menor.png, id=138, 852.18375pt x 471.7625pt>
 File: images/s1menor.png Graphic file (type png)
 <use images/s1menor.png>
-Package pdftex.def Info: images/s1menor.png  used on input line 38.
-(pdftex.def)             Requested size: 236.01561pt x 170.01566pt.
-)
+Package pdftex.def Info: images/s1menor.png  used on input line 40.
+(pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
 
-[9 <./images/mismotamanio.png> <./images/transpuesto.png> <./images/s1vacio.png> <./images/s2vacio.png>]
+
+[9 <./images/mismotananio.png> <./images/transpuesto.png> <./images/s1vacio.png> <./images/s2vacio.png>])
 
 [10 <./images/s1mayor.png> <./images/s1menor.png>] (sections/conclusions.tex)
 
@@ -1656,7 +1655,7 @@ Overfull \hbox (5.05753pt too wide) in paragraph at lines 33--34
 
 [12] (sections/appendix1.tex)
 
-LaTeX Warning: Empty bibliography on input line 128.
+LaTeX Warning: Empty bibliography on input line 129.
 
 (tarea_main.aux
 LaTeX Info: Redefining \sptext on input line 14.
@@ -1670,34 +1669,26 @@ L3 programming layer <2024-11-02>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `tarea_main.out' has not changed.
 (rerunfilecheck)             Checksum: D6AC0648674248B534F5A7A59DE72D90;810.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                tarea_main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'tarea_main.run.xml'.
 \openout1 = `tarea_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55365 strings out of 473681
- 1264446 string characters out of 5719670
- 2226646 words of memory out of 5000000
- 77498 multiletter control sequences out of 15000+600000
+ 55380 strings out of 473681
+ 1264702 string characters out of 5719670
+ 2232774 words of memory out of 5000000
+ 77511 multiletter control sequences out of 15000+600000
  718293 words of font info for 177 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,22n,110p,7244b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on tarea_main.pdf (12 pages, 253386 bytes).
+Output written on tarea_main.pdf (12 pages, 355478 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

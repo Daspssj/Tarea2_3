@@ -15,10 +15,10 @@
         $m \leftarrow$ longitud de S2\;
         
         \uIf{$n = 0$}{
-            \Return costo de insertar todos los caracteres de S2\;
+            \Return Costo de insertar todos los caracteres de S2\;
         }
         \uElseIf{$m = 0$}{
-            \Return costo de eliminar todos los caracteres de S1\;
+            \Return Costo de eliminar todos los caracteres de S1\;
         }
         
         $costo\_sust \leftarrow$ \CostoSust{S1[n-1], S2[m-1]} + \FuerzaBruta{S1[0:n-1], S2[0:m-1]}\;
@@ -30,8 +30,8 @@
             $costo\_trans \leftarrow$ \CostoTrans{S1[n-2], S1[n-1]} + \FuerzaBruta{S1[0:n-2], S2[0:m-2]}\;
         }
         
-        \Return $\min(costo\_sust, costo\_elim, costo\_inser, costo\_trans)$\;
+        \Return Minimo costo entre todas las opereaciones\;
     }
-    \caption{Fuerza Bruta para calcular la distancia mínima de edición.}
+    \caption{Fuerza Bruta para calcular la distancia mínima de edición extendida.}
     \label{alg:fuerza_bruta}
 \end{algorithm}
