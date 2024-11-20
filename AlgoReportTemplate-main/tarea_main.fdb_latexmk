@@ -1,13 +1,12 @@
 # Fdb version 4
-["biber tarea_main"] 1731898421.32025 "tarea_main.bcf" "tarea_main.bbl" "tarea_main" 1732031295.25491 0
-  "tarea_main.bcf" 1732031295 108490 287d889104e8f6a3899395dbc97b2903 "pdflatex"
+["biber tarea_main"] 1732064239.20917 "tarea_main.bcf" "tarea_main.bbl" "tarea_main" 1732064822.04798 0
+  "tarea_main.bcf" 1732064821 108490 287d889104e8f6a3899395dbc97b2903 "pdflatex"
   (generated)
   "tarea_main.bbl"
   "tarea_main.blg"
   (rewritten before read)
-["pdflatex"] 1732031293.28027 "c:/Users/Dasp/Documents/GitHub/Tarea2_3-Algoco/AlgoReportTemplate-main/tarea_main.tex" "tarea_main.pdf" "tarea_main" 1732031295.25542 0
+["pdflatex"] 1732064820.04431 "c:/Users/Dasp/Documents/GitHub/Tarea2_3-Algoco/AlgoReportTemplate-main/tarea_main.tex" "tarea_main.pdf" "tarea_main" 1732064822.04847 0
   "C:/Users/Dasp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1731884769 82665 3eb0bcc9d631fc78d736d6e53fe0e9b2 ""
-  "C:/Users/Dasp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecit1000.pk" 1731898469 26728 579d6b0ac7a52b05192cdcf8aa9b2aff ""
   "C:/Users/Dasp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk" 1731884767 21972 8950e924482cb536b9f92adb1f5c8bcf ""
   "C:/Users/Dasp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1731895116 12668 ecce4043a2829dc78c24ea82647ff6ce ""
   "C:/Users/Dasp/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1731884765 688 37338d6ab346c2f1466b29e195316aa4 ""
@@ -15,7 +14,6 @@
   "C:/Users/Dasp/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1731884765 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "C:/Users/Dasp/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1731884413 11986479 8b52c9bb6d1dfd5e6d6f222ebddbb28a ""
   "C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
-  "C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecit1000.tfm" 993062048 1356 26b6ae61ed8e8f2b58dad9f0a3f033b4 ""
   "C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1095.tfm" 993062124 3172 eb6efaa83c6c52473a1c403f376eab0f ""
   "C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1095.tfm" 993062342 1352 fa21dcb5ddc7d1dc47d14cd897fdeb0f ""
   "C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1095.tfm" 993062508 1460 8005ce585ff351dff78998923504da5e ""
@@ -326,23 +324,23 @@
   "images/s2vacio.png" 1731983197 53012 e66b3764a4bbfc79f0ab4948bc058f2b ""
   "images/transpuesto.png" 1731983181 44256 7ca09fa80ed6f92e0b49fbe685b1779b ""
   "preamble.tex" 1730059289 2166 a21ad49a00d57ed2e6f6d46316dc31b6 ""
-  "sections/abstract.tex" 1731898466 41 0a1c1304ec2db9bb660ac561e9d7b28e ""
+  "sections/abstract.tex" 1732064697 561 dbb5c717f769fb6f17cf695651e8cbf3 ""
   "sections/appendix1.tex" 1731898215 3 6d04f95f3c73cbca502d3439d18a9e4e ""
-  "sections/conclusions.tex" 1731898428 1 68b329da9893e34099c7d8ad5cb9c940 ""
+  "sections/conclusions.tex" 1732064236 1849 b244a4062ab68aad0fad5d7ab825ac0e ""
   "sections/design_analysis.tex" 1731895562 1 68b329da9893e34099c7d8ad5cb9c940 ""
   "sections/design_analysis_brute_force.tex" 1732023048 1449 581eda8d8e815dec3db75b6bb142944b ""
   "sections/design_analysis_dynamic_programming.tex" 1732026052 6596 b8878559da4d3366946c991e3390f42a ""
   "sections/experiment_dataset.tex" 1732028155 1502 3beb7517df22cdbd33f69b6701309e59 ""
   "sections/experiment_intro.tex" 1732027304 613 e1c9d3d7ad465c6249b5a6a5ae95b842 ""
-  "sections/experiment_results.tex" 1732031292 3828 646d93e30b1c898b3f70dca453e60ade ""
+  "sections/experiment_results.tex" 1732046140 4356 c9893aa39eee203ad411a62bb2c1a2d4 ""
   "sections/implementations.tex" 1732027349 1160 e36652b3734c8ec7495548ab78166321 ""
-  "sections/introduction.tex" 1731898419 2 e1c06d85ae7b8b032bef47e42e4c08f9 ""
-  "tarea_main.aux" 1732031295 5346 796bf7d28c6de3ebe426540816694d21 "pdflatex"
-  "tarea_main.bbl" 1731898422 486 76d65a242ec496c9b4361af646ff12cb "biber tarea_main"
-  "tarea_main.out" 1732031295 810 d6ac0648674248b534f5a7a59de72d90 "pdflatex"
-  "tarea_main.run.xml" 1732031295 2347 3a149f2168a09cc18164f684ae49c28d "pdflatex"
+  "sections/introduction.tex" 1732064819 1829 ccbf48d4e6a8cf2a44dc2c6405c384fb ""
+  "tarea_main.aux" 1732064821 5346 796bf7d28c6de3ebe426540816694d21 "pdflatex"
+  "tarea_main.bbl" 1732064240 486 76d65a242ec496c9b4361af646ff12cb "biber tarea_main"
+  "tarea_main.out" 1732064821 810 d6ac0648674248b534f5a7a59de72d90 "pdflatex"
+  "tarea_main.run.xml" 1732064821 2347 3a149f2168a09cc18164f684ae49c28d "pdflatex"
   "tarea_main.tex" 1732023996 3265 9a629b9092cd2ceaadb043774a723d36 ""
-  "tarea_main.toc" 1732031295 1751 d6148573512717ec6510fa2dd995d15c "pdflatex"
+  "tarea_main.toc" 1732064821 1751 d6148573512717ec6510fa2dd995d15c "pdflatex"
   (generated)
   "tarea_main.aux"
   "tarea_main.bcf"

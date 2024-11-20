@@ -43,14 +43,20 @@ bastante amigable con el ususario por lo que no sera dificil usarla, a continuac
 \end{figure}
 
 
-Como podemos observar en los primeros 2 graficos correspondientes a la figura 1 se puede observar que los tiempos de ejecucion de cada algoritmo son muy distintos
-entre si y esto se debe a las complejidades temporales de los algoritmos, se puede ver que el agoritmo de fuerza bruta crece de manera
-exponencial mientras que programacion dinamica se mantiene en un rango de valores aceptable, luego para los algunos de los strings
+Como podemos observar en los primeros 2 graficos correspondientes a la figura 1 se puede observar que los tiempos de ejecucion de cada algoritmo 
+son muy distintos entre si y esto se debe a las complejidades temporales de los algoritmos, se puede ver que el agoritmo de fuerza bruta 
+crece de manera exponencial mientras que programacion dinamica se mantiene en un rango de valores aceptable, luego para los algunos de los strings
 vacios se ve que Fuerza bruta tiene un tiempo de ejecucion mas bajo que el de programacion dinamica aunque no mucho igualmente se puede
 ver en los graficos de la figura 2 y por ultimo para los strings de distinto tamaño se puede ver que el algoritmo de fuerza bruta tiene un tiempo 
 de ejecucion mas alto que el de programacion dinamica, sin embargo estos tiempos no son tan altos como en el caso de los strings de
 mismo tamaño ya que solo se transpone una cadena, esto quiere decir que no se tiene que recorrer todas las posibles combinaciones
 entre insertar, eliminar, sustituir o transponer.
+
+
+Por otro lado tenemos el uso de memoria de los algortimos, donde el algoritmo de fuerza bruta tiene un uso de memoria de $O(n)$, lo que significa que
+su uso de memoria es lineal en donde $n$ es el tamaño de la cadena de entrada, por otro lado tenemos el algoritmo de programacion dinamica
+el cual su uso de memoria es el tamaño en bytes de la matriz que se crea para almacenar los resultados de las subcadenas, por lo que su uso de memoria
+es de $O(n \times m)$ donde $n$ y $m$ son los tamaños de las cadanas de entrada.
 
 
 Nota: Es importante tener en cuenta el uso del cache para el primer resultado de fuerza bruta y programacion dinamica, ya que

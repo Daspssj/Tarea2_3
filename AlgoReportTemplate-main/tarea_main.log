@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  19 NOV 2024 12:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  19 NOV 2024 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1541,20 +1541,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 8.27998pt on input line 42.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 42.
- (sections/abstract.tex
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 1.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 1.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 1.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 1.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 1.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 1.
-) (tarea_main.toc
+ (sections/abstract.tex) (tarea_main.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1567,17 +1554,22 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1.
 
 [1{C:/Users/Dasp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
-] (sections/introduction.tex)
+] (sections/introduction.tex
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 23.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 23.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 23.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 23.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 23.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 23.
+)
 
 [2] (sections/design_analysis.tex)
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 74.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 74.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 74.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 74.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family futs in TS1 encoding.
             Default family used instead on input line 89.
@@ -1587,7 +1579,12 @@ LaTeX Info: Symbol \textrightarrow not provided by
 LaTeX Info: Symbol \textrightarrow not provided by
             font family futs in TS1 encoding.
             Default family used instead on input line 91.
- (sections/design_analysis_brute_force.tex) (sections/design_analysis_dynamic_programming.tex
+ (sections/design_analysis_brute_force.tex
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 35.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 35.
+) (sections/design_analysis_dynamic_programming.tex
 
 [3]
 
@@ -1610,32 +1607,32 @@ LaTeX Info: Symbol \textrightarrow not provided by
 [7] (sections/experiment_intro.tex) (sections/experiment_dataset.tex) (sections/experiment_results.tex
 
 [8]
-<images/mismotananio.png, id=133, 852.18375pt x 471.7625pt>
+<images/mismotananio.png, id=132, 852.18375pt x 471.7625pt>
 File: images/mismotananio.png Graphic file (type png)
 <use images/mismotananio.png>
 Package pdftex.def Info: images/mismotananio.png  used on input line 15.
 (pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
-<images/transpuesto.png, id=134, 858.20625pt x 471.7625pt>
+<images/transpuesto.png, id=133, 858.20625pt x 471.7625pt>
 File: images/transpuesto.png Graphic file (type png)
 <use images/transpuesto.png>
 Package pdftex.def Info: images/transpuesto.png  used on input line 18.
 (pdftex.def)             Requested size: 236.01561pt x 129.73868pt.
-<images/s1vacio.png, id=135, 876.27374pt x 471.7625pt>
+<images/s1vacio.png, id=134, 876.27374pt x 471.7625pt>
 File: images/s1vacio.png Graphic file (type png)
 <use images/s1vacio.png>
 Package pdftex.def Info: images/s1vacio.png  used on input line 26.
 (pdftex.def)             Requested size: 236.01561pt x 127.06084pt.
-<images/s2vacio.png, id=136, 852.18375pt x 471.7625pt>
+<images/s2vacio.png, id=135, 852.18375pt x 471.7625pt>
 File: images/s2vacio.png Graphic file (type png)
 <use images/s2vacio.png>
 Package pdftex.def Info: images/s2vacio.png  used on input line 29.
 (pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
-<images/s1mayor.png, id=137, 852.18375pt x 471.7625pt>
+<images/s1mayor.png, id=136, 852.18375pt x 471.7625pt>
 File: images/s1mayor.png Graphic file (type png)
 <use images/s1mayor.png>
 Package pdftex.def Info: images/s1mayor.png  used on input line 37.
 (pdftex.def)             Requested size: 236.01561pt x 130.6529pt.
-<images/s1menor.png, id=138, 852.18375pt x 471.7625pt>
+<images/s1menor.png, id=137, 852.18375pt x 471.7625pt>
 File: images/s1menor.png Graphic file (type png)
 <use images/s1menor.png>
 Package pdftex.def Info: images/s1menor.png  used on input line 40.
@@ -1678,17 +1675,17 @@ Package logreq Info: Writing requests to 'tarea_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55380 strings out of 473681
- 1264702 string characters out of 5719670
+ 55372 strings out of 473681
+ 1264588 string characters out of 5719670
  2232774 words of memory out of 5000000
- 77511 multiletter control sequences out of 15000+600000
- 718293 words of font info for 177 fonts, out of 8000000 for 9000
+ 77502 multiletter control sequences out of 15000+600000
+ 714904 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,22n,110p,7244b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on tarea_main.pdf (12 pages, 355478 bytes).
+ <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Dasp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Dasp/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on tarea_main.pdf (12 pages, 353882 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
+ 256 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
